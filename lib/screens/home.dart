@@ -11,8 +11,8 @@ class _HomeState extends State<Home> {
   TextEditingController _taskController = TextEditingController();
 
   void addList(String li, context) {
+    Provider.of<todoList>(context, listen: false).addTodo(li);
     setState(() {
-      Provider.of<todoList>(context, listen: false).addTodo(li);
       Navigator.of(context).pop();
       _taskController.clear();
     });
