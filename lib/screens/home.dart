@@ -56,7 +56,12 @@ class ListViewWidget extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         return Center(
           child: Card(
-            child: Text(loadData.listitem[index].todoListtask),
+            elevation: 2,
+            child: Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(5),
+              child: Text(loadData.listitem[index].todoListtask),
+            ),
           ),
         );
       },
